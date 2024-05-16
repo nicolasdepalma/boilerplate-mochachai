@@ -41,8 +41,8 @@ suite('Unit Tests', function () {
     // #6
     test('#strictEqual, #notStrictEqual', function () {
       assert.notstrictEqual(6, '6');
-      assert.StrictEqual(6, 3 * 2);
-      assert.StrictEqual(6 * '2', 12);
+      assert.strictEqual(6, 3 * 2);
+      assert.strictEqual(6 * '2', 12);
       assert.notstrictEqual([1, 'a', {}], [1, 'a', {}]);
     });
     // #7
