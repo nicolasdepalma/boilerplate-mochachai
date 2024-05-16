@@ -35,12 +35,6 @@ suite('Functional Tests', function () {
     });
     // #3
     test('Send {surname: "Colombo"}', function (done) {
-      chai
-        .request(server)
-        .keepOpen()
-        .put('/travellers')
-        .send({surname:'Colombo'})
-        .end(function (err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.type,'application/json');
           assert.equal(res.body.name,"Cristoforo");
