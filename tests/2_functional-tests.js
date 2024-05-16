@@ -29,7 +29,7 @@ suite('Functional Tests', function () {
         .get('/hello?name=xy_z')
         .end(function (err, res) {
           assert.equal(res.status, 200);
-          assert.equal(res.text, 'hello <your_name>');
+          assert.equal(res.text,'hello <your_name>');
           done();
         });
     });
