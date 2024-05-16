@@ -51,7 +51,12 @@ suite('Functional Tests', function () {
     });
     // #4
     test('Send {surname: "da Verrazzano"}', function (done) {
-      .end(function (err, res) {
+      chai
+        .request(server)
+        .keepOpen()
+        .put('/travellers')
+        .send({surname:'Colomboda Verrazzano'})
+        .end(function (err, res) {
       assert.equal(res.status, 200);
           assert.equal(res.type,'application/json');
           assert.equal(res.body.name,"Giovanni");
