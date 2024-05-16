@@ -55,7 +55,7 @@ suite('Functional Tests', function () {
       .request(server)
       .keepOpen()
       .put('/travellers')
-      .send({surname:'/da Verrazzano'})
+      .send({surname:'da Verrazzano'})
       .end(function (err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.type,'application/json');
