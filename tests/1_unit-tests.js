@@ -40,10 +40,10 @@ suite('Unit Tests', function () {
     });
     // #6
     test('#strictEqual, #notStrictEqual', function () {
-      assert.strictEqual(6, '6');
-      assert.notStrictEqual(6, 3 * 2);
-      assert.notStrictEqual(6 * '2', 12);
-      assert.strictEqual([1, 'a', {}], [1, 'a', {}]);
+      assert.notstrictEqual(6, '6');
+      assert.StrictEqual(6, 3 * 2);
+      assert.StrictEqual(6 * '2', 12);
+      assert.notstrictEqual([1, 'a', {}], [1, 'a', {}]);
     });
     // #7
     test('#deepEqual, #notDeepEqual', function () {
