@@ -52,6 +52,7 @@ suite('Functional Tests', function () {
     // #4
     test('Send {surname:"da Verrazzano"}', function (done) {
       request.end (function (err, res) {
+        send({surname:'da Verrazzano'})
           assert.equal(res.status, 200);
           assert.equal(res.type,'application/json');
           assert.equal(res.body.name,'Giovanni');
