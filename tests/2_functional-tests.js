@@ -54,8 +54,8 @@ suite('Functional Tests', function () {
       chai
       .request(server)
       .keepOpen()
-      .put('/travellers')
-      .send({surname:'da Verrazzano'})
+      .put('/Json')
+      .send({surname:'/travellers'})
       .end(function (err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.type,'application/json');
